@@ -75,13 +75,44 @@ import matplotlib.pyplot as plt
 year = [1950,1970, 1990, 2010]
 population = [20, 30, 40, 50]
 
-chart = plt.plot(year, population)
+#chart = plt.plot(year, population)
 
-plt.show(chart)
+#plt.show(chart)
+
+# CUSTOMIZING THE GRAPH
 
 # to draw a scatter graph
 chart_scatter = plt.scatter(year, population)
+
+# adding a title to the chart
+title = "World Population change by year"
+xlab = "Year"
+ylab = "Population"
+ytick = ["20B", "30B", "40B", "50B"]
+
+# adding a title to the chart
+plt.title(title)
+
+#Adding an x axis label
+plt.xlabel(xlab)
+
+# adding a y axis label
+plt.ylabel(ylab)
+
+# Adding a ticker on the y axis, kindly note the two arguments given. Arg 1 list of what was , arg2 list of what you want to be
+plt.yticks(population, ytick)
 plt.show(chart_scatter)
+
+
+dict = {
+    'Asia':'red',
+    'Europe':'green',
+    'Africa':'blue',
+    'Americas':'yellow',
+    'Oceania':'black'
+}
+
+
 
 
 

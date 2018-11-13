@@ -1,0 +1,202 @@
+i,countries,le
+1,Japan,83.74
+2,Italy,83.31
+3,Switzerland,82.84
+4,Singapore,82.66
+5,Israel,82.64
+6,Iceland,82.30
+7,Spain,82.28
+8,Australia,83.42
+9,Hong Kong,82.07
+10,Sweden,81.93
+11,France (metropol.),81.85
+12,Canada,81.78
+13,New Zealand,81.56
+14,South Korea,81.43
+15,Luxembourg,81.34
+16,Norway,81.32
+17,Netherlands,81.31
+18,Chile,81.21
+19,Martinique ( France),81.18
+20,Austria,81.09
+21,Germany,80.66
+22,Greece,80.60
+23,Ireland,80.57
+24,Guadeloupe ( France),80.56
+25,Portugal,80.55
+26,Belgium,80.53
+27,Finland,80.53
+28,Channel Islands ( UK),80.45
+29,United Kingdom,80.45
+30,Malta,80.30
+31,Macau,80.30
+32,Slovenia,80.08
+33,U.S. Virgin Islands ( US),80.06
+34,Denmark,79.99
+35,Cyprus,79.90
+36,Réunion ( France),79.54
+37,Mayotte ( France),79.34
+38,Taiwan,79.26
+39,Puerto Rico ( US),79.22
+40,Costa Rica,79.16
+41,Cuba,79.16
+42,French Guiana ( France),78.98
+43,United States,78.88
+44,Lebanon,78.86
+45,Guam ( US),78.72
+46,Brunei,78.44
+47,Czech Republic,78.35
+48,Qatar,77.89
+49,Curaçao ( Netherlands),77.77
+50,Albania,77.49
+51,Panama,77.32
+52,Poland,77.14
+53,Croatia,77.05
+54,Uruguay,76.96
+55,United Arab Emirates,76.67
+56,Estonia,76.52
+57,Mexico,76.48
+58,Bahrain,76.38
+59,Maldives,76.36
+60,Oman,76.33
+61,Bosnia and Herzegovina,76.26
+62,New Caledonia ( France),76.19
+63,French Polynesia ( France),76.12
+64,Slovakia,76.04
+65,Montenegro,76.02
+66,Argentina,76.01
+67,Antigua and Barbuda,75.82
+68,Vietnam,75.57
+69,Ecuador,75.54
+70,Jamaica,75.44
+71,China,75.43
+72,Aruba ( Netherlands),75.39
+73,Barbados,75.37
+74,Republic of Macedonia,75.16
+75,Bahamas,75.15
+76,Iran,75.06
+77,Hungary,74.98
+78,Turkey,74.84
+79,Saint Lucia,74.81
+80,Serbia,74.65
+81,Sri Lanka,74.64
+82,Georgia,74.64
+83,Tunisia,74.60
+84,Armenia,74.56
+85,Malaysia,74.50
+86,Nicaragua,74.47
+87,Romania,74.46
+88,Algeria,74.42
+89,Kuwait,74.28
+90,Mauritius,74.15
+91,Peru,74.15
+92,Thailand,74.14
+93,Saudi Arabia,74.08
+94,Brazil,74.05
+95,Bulgaria,74.04
+96,Venezuela,73.95
+97,Latvia,73.95
+98,Jordan,73.79
+99,Colombia,73.75
+100,Morocco,73.61
+101,Dominican Republic,73.19
+102,Grenada,73.17
+103,Lithuania,73.07
+104,Samoa,73.02
+105,Cape Verde,72.97
+106,Seychelles,72.94
+107,Honduras,72.83
+108,Saint Vincent and the Grenadines,72.75
+109,Paraguay,72.74
+110,Palestine,72.65
+111,El Salvador,72.64
+112,Tonga,72.60
+113,Vanuatu,71.48
+114,Libya,71.47
+115,Guatemala,71.47
+116,Moldova,71.33
+117,Belarus,71.08
+118,Bangladesh,71.01
+119,Suriname,70.90
+120,Egypt,70.84
+121,Ukraine,70.76
+122,Azerbaijan,70.62
+123,Kyrgyzstan,70.26
+124,Trinidad and Tobago,70.23
+125,North Korea,69.91
+126,Russia,69.83
+127,Belize,69.76
+128,Fiji,69.72
+129,Syria,69.51
+130,Iraq,69.19
+131,Tajikistan,69.07
+132,Kazakhstan,69.07
+133,Nepal,69.03
+134,Federated States of Micronesia,68.93
+135,Mongolia,68.89
+136,Bhutan,68.88
+137,Indonesia,68.59
+138,Uzbekistan,68.25
+139,Philippines,67.99
+140,Timor-Leste,67.73
+141,Bolivia,67.72
+142,Western Sahara,67.61
+143,Cambodia,67.61
+144,Solomon Islands,67.53
+145,India,67.47
+146,Guyana,66.24
+147,São Tomé and Príncipe,66.23
+148,Pakistan,65.88
+149,Senegal,65.81
+150,Kiribati,65.74
+151,Myanmar,65.64
+152,Laos,65.51
+153,Turkmenistan,65.39
+154,Madagascar,64.50
+155,Namibia,64.34
+156,Botswana,64.12
+157,Tanzania,64.04
+158,Gabon,63.65
+159,Yemen,63.51
+160,Rwanda,63.14
+161,Ethiopia,63.13
+162,Sudan,63.08
+163,Eritrea,63.07
+164,Comoros,62.83
+165,Mauritania,62.77
+166,Papua New Guinea,62.31
+167,Haiti,62.29
+168,Djibouti,61.61
+169,Congo,61.42
+170,Ghana,61.03
+171,Malawi,60.97
+172,Niger,60.65
+173,Kenya,60.62
+174,Liberia,60.25
+175,Gambia,59.83
+176,Afghanistan,59.82
+177,Benin,59.20
+178,Togo,59.01
+179,Zambia,58.75
+180,Democratic Republic of the Congo,58.10
+181,Burkina Faso,58.07
+182,Guinea,58.04
+183,Uganda,57.25
+184,Mali,57.23
+185,Equatorial Guinea,57.13
+186,South Africa,57.11
+187,Burundi,56.07
+188,South Sudan,55.06
+189,Somalia,54.88
+190,Cameroon,54.87
+191,Zimbabwe,54.78
+192,Guinea-Bissau,54.72
+193,Mozambique,54.63
+194,Nigeria,52.29
+195,Angola,51.68
+196,Chad,51.13
+197,Côte d'Ivoire,50.97
+198,Sierra Leone,50.19
+199,Central African Republic,49.53
+200,Lesotho,49.50
+201,Eswatini (Swaziland),49.18
