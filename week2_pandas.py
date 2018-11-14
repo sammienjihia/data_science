@@ -77,4 +77,9 @@ pandas_dataframe9 = pandas_dataframe3
 pandas_dataframe9.columns = ['asd', 'dfg', 'kgf']
 print(pandas_dataframe9)
 
+print("*****"*20)
+# A way to select a data 
+# first list is a list of columns in string format, followed by a list of sliced of rows
+print(pandas_dataframe3[['dfg','kgf']][24:40])
+
 

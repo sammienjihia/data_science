@@ -76,3 +76,17 @@ print(combined_dataframe.iloc[:5,:])
 print("*****"*20)
 print(combined_dataframe.iloc[5:,:])
 
+# print (combined_dataframe['gdp'])
+# print(combined_dataframe['le'])
+combined_dataframe2 = pd.merge(AcountriesGDP, AcountriesLE, on='countries', how='inner')
+
+life_expectancy = np.array(combined_dataframe2['le'])
+gross_dp = np.array(combined_dataframe2['gdp'])
+
+plt.scatter(life_expectancy, gross_dp)
+plt.xlabel('Life Expectancy (From UN)')
+plt.ylabel('Gross Domestic Product')
+
+
+plt.show()
+
