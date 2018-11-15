@@ -40,6 +40,10 @@ print(pd_TSindex.nsmallest(K, columns='E.Distance'))
 print(pd_data['Label'].mode())
 
 
+
+# KNN Custom function
+
+
 def KNN(k, target, sample_size, samples, number_features, pd_dataframe, new_column_name, label_column):
  	e_distance = []
  	for rows in range(sample_size):
