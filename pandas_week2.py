@@ -1,5 +1,6 @@
 import pandas as pd 
 import numpy as np 
+import matplotlib.pyplot as plt 
 
 pd_patientRecords = pd.read_csv('RegistrationData.csv')
 pd_patientVisits = pd.read_csv('PatientPaidVisit.csv')
@@ -78,8 +79,32 @@ print(pd_patientVisits[ pd_patientVisits.diagnosis.str.contains('tyfoid', regex=
 dataframe1 = pd_patientVisits[ pd_patientVisits.diagnosis.str.contains('tyfoid', regex=True, case=False)==True] 
 dataframe2 = pd_patientVisits[ pd_patientVisits.diagnosis.str.contains('typhoid', regex=True, case=False)==True]
 
-print("***"*15)
-print(dataframe1.count())
-print(dataframe2.count())
 
-print(pd_patientVisits.head())
+print("***"*15)
+print(dataframe1)
+
+
+
+# Used the pandas apply function to use a custom function to search the diagnosis column entries for any string in my searchword list 
+searchword =['tyfoid', 'typhoid']
+
+def finder(x):
+    for i in searchword:
+        if str(i).lower() in str(x).lower():
+            return True
+    else:
+        return np.nan
+
+pd_patientVisits['is_typhoid'] = pd_patientVisits.diagnosis.apply(finder)
+
+print(pd_patientVisits[pd_patientVisits['is_typhoid']==True])
+
+
+pd_patientVisits.index = pd.to_datetime(pd_patientVisits.visit_date)
+
+pd_grouped = pd_patientVisits.groupby(by=['visit_location']).is_typhoid.count()
+
+print(pd_grouped)
+pd_grouped.plot(kind='bar')
+print(pd_patientVisits.index.month)
+plt.show()
