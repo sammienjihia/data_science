@@ -100,11 +100,22 @@ pd_patientVisits['is_typhoid'] = pd_patientVisits.diagnosis.apply(finder)
 print(pd_patientVisits[pd_patientVisits['is_typhoid']==True])
 
 
-pd_patientVisits.index = pd.to_datetime(pd_patientVisits.visit_date)
+pd_patientVisits.visit_date = pd.to_datetime(pd_patientVisits.visit_date)
 
-pd_grouped = pd_patientVisits.groupby(by=['visit_location']).is_typhoid.count()
+pd_grouped = pd_patientVisits.groupby( [pd_patientVisits.visit_location,pd_patientVisits.visit_date.dt.strftime('%B')] ).is_typhoid.count()
+
+
+print("*****"*15)
+
+# Using concat function to combine two data frames together. Remember the fucntions agurment should be a list of simillar items to be concactenated
+print(pd.concat([dataframe1,dataframe2]))
+
 
 print(pd_grouped)
-pd_grouped.plot(kind='bar')
-print(pd_patientVisits.index.month)
-plt.show()
+# pd_grouped.plot(kind='bar')
+
+# plt.show()
+
+print('hello world')
+
+
