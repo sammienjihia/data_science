@@ -1,27 +1,57 @@
 import pandas as pd 
 import numpy as np 
-from sklearn.model_selection import cross_validate
+import matplotlib.pyplot as plt 
 from sklearn.naive_bayes import GaussianNB
-# python requests library can download web pages
-import requests
-from bs4 import BeautifulSoup
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
-# can't find a csv dataset of the golf dataset, so i just have to scrape the dataset from
-# https://gerardnico.com/data_mining/weather
 
-golf_url = 'https://gerardnico.com/data_mining/weather'
+# Gaussioan Naive Bayes
+"""
+This Naive bayes classifier assumes that the data from each label is drawn from a Gaussian distributin e.i a normal distribution
+ The frequency distribution forms a bell curve
+"""
+
+from sklearn import datasets 
+from sklearn.model_selection import train_test_split
+
+iris_data = datasets.load_iris()
+
+# The X variable carries the features while the y variable carries the labels
+
+X = iris_data.data
+y = iris_data.target
+
+# Using the sklearn train test split function to split the data into training data and test data
+
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.3)
+
+# Initia lize the Gaussian naive bayes classifier
+classifier = GaussianNB()
+
+# Train your model/Classifier
+# Nb Training invlovles mapping your features to your target values
+classifier.fit(X_train,y_train)
+
+# Use your test data to predict
+y_predicted = classifier.predict(X_test)
+
+# Check the accuracy of your classifier using the accuracy_score
+# If normalize == True return the fruction of correctly classified samples, else if False return the number of samples that are correctly classified
+print(accuracy_score(y_test, y_predicted, normalize=False))
+print("***"*10)
+print(accuracy_score(y_test, y_predicted, normalize=True))
+print(len(X_test))
 
 """
-pandas cannot access this site so we just have to use the requests lib and BeautifulSoup
+Output
+44 This is the number of correclty classified samples
+******************************
+0.9777777777777777 This is a fraction of the correctly classified samples
+45 This the number of the test samples
+
+Thus the model has an accuracy of 97%
+
 """
-# golf_data = pd.read_html(golf_url) 
-# Lets get that page from the above url 
-dataset_page = requests.get(golf_url)
 
-# if status code 200 then download was successful
 
-# Parsing the content with beautiful soup
 
-soup = BeautifulSoup(dataset_page.content, 'html.parser')
-
-print(soup.table)
