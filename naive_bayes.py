@@ -53,5 +53,7 @@ Thus the model has an accuracy of 97%
 
 """
 
+print(classification_report(y_test, y_predicted))
+
 
 
