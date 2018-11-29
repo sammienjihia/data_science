@@ -24,9 +24,6 @@ pd_combined1 = pd.merge(pd_BookRatings, pd_Books, on='ISBN', how='left')
 pd_combined2 =pd.merge(pd_combined1, pd_Users, on='User-ID', how='left')
 
 
-print(pd_BookRatings['Book-Rating'].value_counts())
-print(pd_combined2['Book-Rating'])
-
 # pd_combined2['Book-Rating'].value_counts(sort=False).plot(kind='bar')
 # plt.xlabel("Ratings")
 # plt.ylabel("Count")
@@ -41,3 +38,19 @@ print(pd_combined2['Book-Rating'])
 # plt.title('Age Distribution')
 # plt.savefig('Age_distribution.png', bbox_inches='tight')
 # plt.show()
+
+# Recommendations based on ratings count
+
+# This script selects 5 Book-Ratings with the highest count
+recommendations = pd_combined2['Book-Rating'].value_counts(sort=True).head()
+# print(recommendations)
+
+# recommendations2 = pd_combined2[['Book-Rating','ISBN']].groupby('ISBN')['Book-Rating'].value_counts()
+# print(recommendations2.sort_values('Book-Rating', ascending=False).head())
+
+# rating_count = pd.DataFrame(pd_combined2.groupby('ISBN')['Book-Rating'].count())
+# print(rating_count.sort_values('Book-Rating', ascending=False).head())
+
+print(pd_combined2[['ISBN','Book-Rating']].groupby('ISBN')['Book-Rating'].count().sort_values(ascending=False).head())
+print("****"*10)
+print(pd_combined2[['ISBN','Book-Rating']].groupby('ISBN').count().sort_values('Book-Rating', ascending=False).head())
